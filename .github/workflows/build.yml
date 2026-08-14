@@ -28,7 +28,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl extract_faktur.py
+        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur_extraction.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
