@@ -14,12 +14,12 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v5
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.13' # Anda bisa menyesuaikan versinya
+        python-version: '3.13' # Versi Python stabil terbaru
 
     - name: Install Dependencies
       run: |
@@ -28,7 +28,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur-extraction.py
+        pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur-extraction.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v5
