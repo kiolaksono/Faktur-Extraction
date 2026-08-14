@@ -28,10 +28,10 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur_extraction.py
+        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur-extraction.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: ExtractFaktur-Windows-EXE
-        path: dist/faktur_extraction.exe
+        path: dist/faktur-extraction.exe
