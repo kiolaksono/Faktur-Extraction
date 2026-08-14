@@ -29,7 +29,7 @@ jobs:
     - name: Build EXE with PyInstaller
       run: |
         # --onefile membuat program menjadi satu file .exe tunggal tanpa folder tambahan
-        pyinstaller --onefile extract_faktur.py
+        pyinstaller --onefile faktur_extraction.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
