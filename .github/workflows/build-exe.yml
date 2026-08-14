@@ -14,12 +14,12 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
-        python-version: '3.10' # Anda bisa menyesuaikan versinya
+        python-version: '3.13' # Anda bisa menyesuaikan versinya
 
     - name: Install Dependencies
       run: |
@@ -31,7 +31,7 @@ jobs:
         python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl faktur-extraction.py
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: ExtractFaktur-Windows-EXE
         path: dist/faktur-extraction.exe
