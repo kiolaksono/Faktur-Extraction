@@ -28,8 +28,7 @@ jobs:
 
     - name: Build EXE with PyInstaller
       run: |
-        # --onefile membuat program menjadi satu file .exe tunggal tanpa folder tambahan
-        pyinstaller --onefile faktur_extraction.py
+        python -m pyinstaller --onefile --hidden-import pandas --hidden-import openpyxl extract_faktur.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
