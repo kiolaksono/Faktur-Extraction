@@ -34,4 +34,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ExtractFaktur-Windows-EXE
-        path: dist/extract_faktur.exe
+        path: dist/faktur_extraction.exe
